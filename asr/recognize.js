@@ -47,7 +47,6 @@ function recognize(audio, languageCcode, userId, callback) {
     let codeC = "AMR_WB";
     let sampleRateHertz = "16000";
 
-    profanityFilter = profanityFilter ? 1 : 0;
     var queryBodyJson = "{\"languageCode\": \"" + languageCcode + "\", \"config\": {\"codec\": \"" + codeC + "\", \"sampleRateHertz\": " + sampleRateHertz + "}, \"audio\": \"" + audio + "\", \"userId\": \"" + userId + "\"}";
     
     var nowTime = new Date().toISOString().replace(/\..+/,'') + 'Z';
